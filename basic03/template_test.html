@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Template Test</title>
+  </head>
+  <body>
+    <div id="app1">
+      <h3>{{message}}</h3>
+    </div>
+    <div id="app2">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+      new Vue({
+        data:{
+          message:'Hello, app1 !'
+        }
+      }).$mount('#app1');
+
+      new Vue({
+        data:{
+          message:'Hello, app2 !'
+        },
+        template: '<h3>{{ message }}</h3>'
+      }).$mount('#app2');
+    </script>
+  </body>
+</html>
