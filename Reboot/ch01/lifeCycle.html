@@ -22,8 +22,9 @@
           created: () =>{
             console.log("created");
           },
-          mounted: () =>{
+          mounted(){
             console.log("mounted");
+            this.message = 'Hello VUE !';
           },
           updated: () =>{
             console.log("updated");
