@@ -6,18 +6,17 @@
 </head>
 <body>
   <div id="app">
-    <my-local-component></my-local-component>
+    <p> {{ message }}</p>
+    <p> {{ message + "!!!" }}</p>
+    <p> {{ message.split('').reverse().join('') }}</p>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
   <script>
-    var cmp = {
-      template: '<div>지역 컴포넌트가 등록되었습니다!</div>'
-    };
-
     new Vue({
-      el : '#app',
-      components : {
-        'my-local-component' : cmp
+      el:'#app',
+      data : {
+        message : "Hello Vue.js !"
       }
     });
   </script>

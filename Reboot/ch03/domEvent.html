@@ -6,19 +6,17 @@
 </head>
 <body>
   <div id="app">
-    <my-local-component></my-local-component>
+    <button v-on:click="popupAlert">경고 창 버튼</button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
   <script>
-    var cmp = {
-      template: '<div>지역 컴포넌트가 등록되었습니다!</div>'
-    };
-
     new Vue({
-      el : '#app',
-      components : {
-        'my-local-component' : cmp
-      }
+      el:'#app',
+        methods : {
+          popupAlert(event){
+            return alert(event);
+          }
+        }
     });
   </script>
 </body>
